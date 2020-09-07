@@ -1,0 +1,4 @@
+*.sfc
+*.smc
+*.srm
+target/
