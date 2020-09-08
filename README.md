@@ -1,3 +1,5 @@
+To be assembled using [Asar](https://github.com/RPGHacker/asar), see the Makefile.
+
 **Global Features**
 - In-game save states for fxpak/sd2snes. Note that you should load the relevant game before loading a state
 	- `R+Select` to save
@@ -19,5 +21,3 @@
 
 **todo**
 - add all the smb2j features to smb1 because it's really easy to do
-
-To be assembled using [Asar](https://github.com/RPGHacker/asar), see the Makefile.
