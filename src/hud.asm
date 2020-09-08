@@ -436,18 +436,27 @@ warp:
 		tax
 		lda .sublevels,x
 		sta $0760
-		; set level data id or something
-		ldx $075F
-		lda $0EC499,x
-		clc
-		adc $0760
-		tax
-		lda $0EC4A6,x
-		sta $0750
-
+		; internal area id and map type handler
+		jsl $0EC34C
+		
 		; warp away
 		stz $0772
 		stz !menu_flag
+		; warp type
+		stz $0752
+		; hidden 1up flag
+		lda #$01	
+		sta $075D
+		; normal gameplay
+		sta $0770
+		; enable hard mode for letter worlds
+		ldy #$00
+		lda $075F
+		cmp #$09
+		bcc +
+		iny
+	+	sty $07FB
+		sty $076A
 		%confirm_sfx()
 
 		; clear hud
