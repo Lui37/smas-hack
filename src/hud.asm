@@ -1,8 +1,5 @@
 @include
 
-; TODO:
-; warping doesn't work properly if you're at the end of a castle
-
 table table.txt
 
 gameplay_hijack:
@@ -70,10 +67,7 @@ hud_menu_init:
 		rts
 
 
-; L/R navigate options
-; u/d/l/r edit value
-; b/a confirm
-; start exit menu
+
 hud_menu:
 		; check menu closing
 		lda !byetudlr_1f
