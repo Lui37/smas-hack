@@ -441,6 +441,8 @@ warp:
 		; hidden 1up flag
 		lda #$01	
 		sta $075D
+		; restart timer
+		sta $0757
 		; normal gameplay
 		sta $0770
 		; enable hard mode for letter worlds
