@@ -16,6 +16,9 @@ gameplay_hijack:
 		; die instantly
 		lda #$49
 		sta $BB
+		; fix 21 frame rule
+		lda #20
+		sta $0787
 		bra .exit_normal
 	+
 
@@ -439,12 +442,15 @@ warp:
 		; warp type
 		stz $0752
 		; hidden 1up flag
-		lda #$01	
+		lda #$01
 		sta $075D
 		; restart timer
 		sta $0757
 		; normal gameplay
 		sta $0770
+		; fix 21 frame rule
+		lda #20
+		sta $0787
 		; enable hard mode for letter worlds
 		ldy #$00
 		lda $075F
