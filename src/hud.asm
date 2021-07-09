@@ -573,8 +573,7 @@ level_win:
 		
 world_win:
 		jsr draw_21rule_excess
-		lda #$06
-		sta $07B1
+		lda #$08
 		rtl
 
 draw_21rule_excess:
@@ -586,7 +585,7 @@ draw_21rule_excess:
 		lda #$0500
 		sta !vram_buffer_size,x
 		lda #$201B
-		sta !vram_buffer_data,y
+		sta !vram_buffer_data,x
 		lda #$2064
 		sta !vram_buffer_data+2,x
 		sep #$20

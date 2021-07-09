@@ -14,9 +14,8 @@ org $0D8E0F
 		jsl og_hud_init
 		nop
 
-org $0D8764
+org $0D8849
 		jsl world_win
-		nop
 		
 org $0DD769
 		jsl level_win
